@@ -12,9 +12,11 @@ triplet = #(define-music-function (parser location music) (ly:music?)
 
 
 chorustext = \lyricmode {
-  It would be nice to start o- ver a- gain!
+  It would be nice
+  to start o- ver a- gain!
   Be- fore we were men.
-  I'd give; I'd bend. Let's play pre- tend.
+  I'd give; I'd bend.
+  Let's play pre- tend.
 }
 
 % Thanks to http://www.songlyrics.com/lights/pretend-lyrics/
@@ -23,17 +25,17 @@ text = \lyricmode {
   I act like a child
   to feel like a kid a- gain.
 
-  It_gets like a pri- son in
-  the_bo- dy I'm liv- ing in.
+  It gets like a pri- son in
+  the bo- dy I'm liv- ing in.
 
-  'Cause_ev- ery- one's watch- ing
-  and_quick to start talk- ing.
-  I'm_lo- sing my in- no- cence.
+  'Cause ev- ery- one's watch- ing
+  and quick to start talk- ing.
+  I'm lo- sing my in- no- cence.
 
-% Wish_I were a lit- tle boy;
+% Wish I were a lit- tle boy;
 % more than a bro- ken toy.
-  Wish_I were a lit- tle girl
-  without the weight of the world.
+  Wish I were a lit- tle girl
+  with- out the weight of the world.
 
   \chorustext
 
@@ -67,37 +69,32 @@ text = \lyricmode {
 
 lyricsSentenceA = \relative c'' {
   \triplet {e8 cis b} |
-  cis8. a16 \triplet {e'8 cis b} 
-  e8. cis16 \triplet {e8 cis b} |
-  \triplet {b a fis ~} fis2.
+  cis8. a16 \triplet {e'8 cis b} e8. cis16 \triplet {e8 cis b} |
+  \triplet {b a fis ~} fis4 r r8. cis'16 |
 }
 
 lyricsSentenceB = {
-  \grace {cis}
   \triplet {fis8 fis fis}
-  \triplet {fis e cis}
-  \grace {cis}
-  \triplet {cis e e}
-  \triplet {e8 cis b~}
+  \triplet {fis16 e cis8. cis16}
+  \triplet {e8 e e}
+  \triplet {e8 cis b~} |
 }
 
 lyricsSentenceC = \relative c'' {
-  \grace {a}
+  b2 r8  a \triplet {e'8 cis8 b} |
+  \triplet {b16 cis8. a8}
+  \triplet {e' cis b} 
+  \triplet {b16 cis8. a8}
   \triplet {e'8 cis b} |
-  b cis 
-  \grace {a} \triplet {e'8 cis b} 
-  b cis 
-  \grace {a} \triplet {e'8 cis b}|
-  \triplet {b a fis ~} fis2.
+  \triplet {b a fis ~} fis4 r r8. cis16 |
 }
 
 lyricsSentenceD = {
-  \grace {cis}
   \triplet {fis8 fis fis}
-  \triplet {fis e cis}
-  \grace {cis}
-  \triplet {e e e}
-  \triplet {e8 cis cis ~ }| b2.
+  \triplet {fis16 e cis8. cis16}
+  \triplet {e8 e e}
+
+  \triplet {e16 cis cis ~ }| b2.
   \triplet {a8 b a}
 }
 
@@ -111,7 +108,6 @@ lyricsMelody = \relative c'' {
   r1 r1 r1 r2. 
   \lyricsSentenceA
   \lyricsSentenceB
-  b2.
   \lyricsSentenceC
   \lyricsSentenceD
   \lyricChorusA
@@ -255,14 +251,10 @@ pianoLH = {
 
   \new PianoStaff  = "piano" \with { connectArpeggios = ##t } <<
     \new Staff = "upper" {
-      \time 4/4
-      \key a \major
       \clef treble
       \pianoRH
     }
     \new Staff = "lower" {
-      \time 4/4
-      \key a \major
       \clef bass
       \pianoLH
     }
