@@ -12,11 +12,9 @@ triplet = #(define-music-function (parser location music) (ly:music?)
 
 
 chorustext = \lyricmode {
-  It would be nice
-  to start o- ver a- gain!
+  It would be nice to start o- ver a- gain!
   Be- fore we were men.
-  I'd give; I'd bend.
-  Let's play pre- tend.
+  I'd give; I'd bend. Let's play pre- tend.
 }
 
 % Thanks to http://www.songlyrics.com/lights/pretend-lyrics/
@@ -32,10 +30,10 @@ text = \lyricmode {
   and_quick to start talk- ing.
   I'm_lo- sing my in- no- cence.
 
-% Wish I were a lit- tle boy;
+% Wish_I were a lit- tle boy;
 % more than a bro- ken toy.
-  Wish I were a lit- tle girl
-  with- out the weight of the world.
+  Wish_I were a lit- tle girl
+  without the weight of the world.
 
   \chorustext
 
@@ -74,13 +72,13 @@ lyricsSentenceA = \relative c'' {
   \triplet {b a fis ~} fis2.
 }
 
-lyricsSentenceB = \relative c'' {
+lyricsSentenceB = {
   \grace {cis}
   \triplet {fis8 fis fis}
   \triplet {fis e cis}
   \grace {cis}
   \triplet {cis e e}
-  \triplet {e cis b~}
+  \triplet {e8 cis b~}
 }
 
 lyricsSentenceC = \relative c'' {
@@ -93,6 +91,21 @@ lyricsSentenceC = \relative c'' {
   \triplet {b a fis ~} fis2.
 }
 
+lyricsSentenceD = {
+  \grace {cis}
+  \triplet {fis8 fis fis}
+  \triplet {fis e cis}
+  \grace {cis}
+  \triplet {e e e}
+  \triplet {e8 cis cis ~ }| b2.
+  \triplet {a8 b a}
+}
+
+lyricChorusA = \relative c''' {
+  a4 ~ \triplet{a8 e e8}
+  \triplet {b'4 gis e}
+  cis1%4 ~ \triplet {c8 }
+}
 
 lyricsMelody = \relative c'' {
   r1 r1 r1 r2. 
@@ -100,6 +113,8 @@ lyricsMelody = \relative c'' {
   \lyricsSentenceB
   b2.
   \lyricsSentenceC
+  \lyricsSentenceD
+  \lyricChorusA
 }
 
 %%%%%%%%%%%%%%%%%%%
@@ -190,18 +205,26 @@ melodyRHb = \relative c' {
   <cis e>
   <b e>
   <b e>
-  cis4
-  cis
-  cis
-  cis
+  cis4 cis cis cis
+  fis fis e e
+  b cis b2
 }
 melodyLHb = \relative c {
   a2
   r
-  fis4
-  fis
-  fis
-  e
+  fis'4 fis fis e
+  b' b a a
+  gis a gis2
+}
+
+chorusRHa = \relative c'' {
+  a4 <cis, e>
+  <gis cis e> <gis' cis,>
+  <a, cis> <a cis>
+  <a fis'> <a fis'>
+}
+chorusLHa = \relative c {
+  a2 cis fis, d
 }
 
 pianoRH = {
@@ -209,12 +232,14 @@ pianoRH = {
   \introRHb
   \melodyRHa
   \melodyRHb
+  \chorusRHa
 }
 pianoLH = {
   \introLHa
   \introLHb
   \melodyLHa
   \melodyLHb
+  \chorusLHa
 }
 
 \new Staff = "lyrics" <<
