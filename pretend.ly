@@ -21,8 +21,7 @@ chorustext = \lyricmode {
 
 % Thanks to http://www.songlyrics.com/lights/pretend-lyrics/
 text = \lyricmode {
-  Once in a while,
-  I act like a child
+  Once in a while, I act like a child
   to feel like a kid a- gain.
 
   It gets like a pri- son in
@@ -33,7 +32,7 @@ text = \lyricmode {
   I'm lo- sing my in- no- cence.
 
 % Wish I were a lit- tle boy;
-% more than a bro- ken toy.
+% be more than a bro- ken toy.
   Wish I were a lit- tle girl
   with- out the weight of the world.
 
@@ -68,44 +67,47 @@ text = \lyricmode {
 }
 
 lyricsSentenceA = \relative c'' {
-  \triplet {e8 cis b} |
-  cis8. a16 \triplet {e'8 cis b} e8. cis16 \triplet {e8 cis b} |
-  \triplet {b a fis ~} fis4 r r8. cis'16 |
+  e8 cis b |
+  cis4 a8 e' cis b | 
+  cis4 a8 e' cis b | 
+  \triplet {b a fis} r2 | r2 r8 cis'8 |
 }
 
 lyricsSentenceB = {
-  \triplet {fis8 fis fis}
-  \triplet {fis16 e cis8. cis16}
-  \triplet {e8 e e}
-  \triplet {e8 cis b~} |
+  fis8 fis fis
+  \triplet {fis e cis} cis
+  e8 e e
+  \triplet {e8 cis b ~} b8 |
 }
 
 lyricsSentenceC = \relative c'' {
-  b2 r8  a \triplet {e'8 cis8 b} |
-  \triplet {b16 cis8. a8}
-  \triplet {e' cis b} 
-  \triplet {b16 cis8. a8}
-  \triplet {e'8 cis b} |
-  \triplet {b a fis ~} fis4 r r8. cis16 |
+  r2.
+  r4 a8 e' cis b |
+  b16 cis8. a8
+  e' cis b |
+  b16 cis8. a8 
+  e'8 cis b ~ |
+  b \triplet {b a fis ~}  fis4. |
+  r2 r8 cis8 |
 }
 
 lyricsSentenceD = {
-  \triplet {fis8 fis fis}
-  \triplet {fis16 e cis8. cis16}
-  \triplet {e8 e e}
-
-  \triplet {e16 cis cis ~ }| b2.
-  \triplet {a8 b a}
+  fis8 fis fis
+  \triplet {fis e cis8} cis8 |
+  e8 e e \triplet {e cis cis ~ } cis ~ |
+  b2.
+  r4. a8 b a |
 }
 
 lyricChorusA = \relative c''' {
-  a4 ~ \triplet{a8 e e8}
-  \triplet {b'4 gis e}
-  cis1%4 ~ \triplet {c8 }
+  a2 e8 e |
+  b'4 gis e
+  cis2.%4 ~ \triplet {c8 }
 }
 
 lyricsMelody = \relative c'' {
-  r1 r1 r1 r2. 
+  r2. r2. r2. r2.
+  r2. r2. r2. r4.
   \lyricsSentenceA
   \lyricsSentenceB
   \lyricsSentenceC
@@ -116,19 +118,19 @@ lyricsMelody = \relative c'' {
 %%%%%%%%%%%%%%%%%%%
 introRHa = \relative c' {
   << {
-    cis4\arpeggio(
+    cis4.\arpeggio(
     cis)
     e\arpeggio(
     e) |
     cis e b e
   } \\ {
-  e2\arpeggio 
+  e2.\arpeggio 
   gis\arpeggio
   ais,
   } >>
 }
 introLHa = \relative c' {
-  a2\arpeggio
+  a2.\arpeggio
   <cis, ais'>\arpeggio
   fis,
   <e gis>
@@ -136,91 +138,67 @@ introLHa = \relative c' {
 
 introRHb = \relative c' {
   << {
-    cis4(
+    cis4.(
     cis)
     e(
     e) |
   } \\ {
-  e2
+  e2.
   gis
   } >>
-  cis,2
+  cis,2.
   b
 }
 introLHb = \relative c {
-  a2
-  <cis ais'>
-  fis
-  <e gis>
-}
-
-introRHb = \relative c' {
-  << {
-    cis4(
-    cis)
-    e(
-    e) |
-  } \\ {
-  e2
-  gis
-  } >>
-  cis,2
-  b
-}
-introLHb = \relative c {
-  a2
+  a2.
   <cis ais'>
   fis
   <e gis>
 }
 
 melodyRHa = \relative c' {
-  <cis e>2
-  <b e>2
-  cis2.
-  cis4
-  fis2
-  e2
-  b4
+  <cis e>2.
+  <b e>2.
+  cis2. ~ | cis4.  cis4. |
+  fis2. | e2. |
+  b4.
   cis
-  b2
+  b2.
 }
 melodyLHa = \relative c {
-  r1
-  fis2.
-  e4
-  b2
-  cis2
-  gis4
+  r2. r2. |
+  fis2. ~ | fis4.  e4. |
+  b2. | cis2. |
+  gis4.
   a
-  gis2
+  gis2.
 }
 
 melodyRHb = \relative c' {
-  r4
-  <cis e>
+  r4.
+  <cis e> |
   <b e>
   <b e>
-  cis4 cis cis cis
+  cis cis cis cis |
   fis fis e e
-  b cis b2
+  b cis b2.
 }
 melodyLHb = \relative c {
-  a2
+  a2. |
   r
-  fis'4 fis fis e
+  fis'4. fis fis e |
   b' b a a
-  gis a gis2
+  gis a gis2.
 }
 
 chorusRHa = \relative c'' {
-  a4 <cis, e>
+  a4. <cis, e>
   <gis cis e> <gis' cis,>
   <a, cis> <a cis>
   <a fis'> <a fis'>
 }
 chorusLHa = \relative c {
-  a2 cis fis, d
+  a2. cis fis, d
 }
 
 pianoRH = {
@@ -238,8 +216,9 @@ pianoLH = {
   \chorusLHa
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%
 \new Staff = "lyrics" <<
-  \time 4/4
+  \time 6/8
   \key a \major
   \new Voice = "lights" {
     \lyricsMelody
