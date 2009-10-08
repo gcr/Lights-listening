@@ -251,10 +251,12 @@ pianoLH = {
 
   \new PianoStaff  = "piano" \with { connectArpeggios = ##t } <<
     \new Staff = "upper" {
+      \key a \major
       \clef treble
       \pianoRH
     }
     \new Staff = "lower" {
+      \key a \major
       \clef bass
       \pianoLH
     }
