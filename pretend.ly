@@ -183,7 +183,7 @@ text = \lyricmode {
   % over a-
   b'4\( gis e\) |
   <gis cis e>4. <gis' cis,> |
-  cis2. |
+  cis,2. |
 
   % ~gain!
   cis2 ~ cis8 a' |
@@ -193,10 +193,32 @@ text = \lyricmode {
   % ~fore
   fis4 a,8 e'4 cis8 ~ |
   <a fis'>4. <a fis'> |
-  d2. |
+  d'2. |
 
   % men.
-  cis2. |
+  cis2 ~ cis8 a |
+  <cis e>4. <cis e>4. |
+  a2. |
+
+  % give
+  b4. cis4. |
+  <b e>4. <b e>4. |
+  gis2. |
+
+  % bend
+  a4. cis4 b16( a |
+  a4. <a cis>4. |
+  fis2. |
+
+  % ~ay pretend
+  gis2) a8 a ~ |
+  r2. |
+  <e' gis>2. |
+
+  % ~end.
+  a2. |
+  <cis e>4. <cis e>4. |
+  a,2 b8 cis |
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
