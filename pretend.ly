@@ -609,6 +609,8 @@ pianoLH = {
     %\override Score.BarNumber #'break-visibility = #end-of-line-invisible
 
     \time 6/8
+    \tempo 4. = 60
+
     \key a \major
     \new Voice = "lights"  {
       \lightsVoice
