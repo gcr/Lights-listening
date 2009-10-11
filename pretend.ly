@@ -497,7 +497,7 @@ text = \lyricmode {
   % ~eee~
   cis2 gis4) ~ |
   %<gis cis>4. <cis e>|
-  <gis b>4. <cis e>|
+  <gis b>4. <cis e>->|
   cis4. r8 cis gis' |
   % fifteen minutes later, and that still doesn't look right... any ideas?
 
