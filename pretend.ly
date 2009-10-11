@@ -15,6 +15,7 @@
                                  The Listening
 
                    Composed and arranged by Lights Poxleitner
+                  Arranged for vocals and piano just for you!
 
 %}
 
@@ -58,13 +59,13 @@ text = \lyricmode {
   I'm lo -- sing my in -- no -- cence.
 
 % Wish I were a lit -- tle boy;
-% be more than a bro- ken toy.
+% more __ than a bro- ken toy.
   Wish I were a lit -- tle girl
   with -- out the weight of the world.
 
   \chorustext
 
-  Re -- mem -- ber the times
+  Re -- mem -- ber the time
   we had so -- da for wine
   and we got by on gra -- ti -- tude?
 
@@ -72,8 +73,8 @@ text = \lyricmode {
   was check your at -- ti -- tude.
 
   Yeah, when fights were for fun?
-  We had wa -- ter in guns?
-  And a place we could call our own?
+  We had wa -- ter in guns
+  and a place we could call our own?
 
   How we lost hold of home,
   I guess I'l ne -- ver know! __ __
@@ -478,7 +479,7 @@ text = \lyricmode {
   <gis b e>4. <gis b e> |
   e2\! cis8\> b |
 
-  % 71
+  % 71 Let's 
   r4. cis4 gis'8 ~ |
   <fis a cis>4. <fis a cis> |
   fis2\! fis4 |
@@ -490,7 +491,7 @@ text = \lyricmode {
 
   % ~teee~
   cis4 b e |
-  <a cis e>4. <a cis e> |
+  <a cis>4. <a cis> |
   a2. |
 
   % ~eee~
