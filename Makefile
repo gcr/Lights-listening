@@ -6,7 +6,9 @@ export DPI = 30
 export INKSCAPE = /usr/local/bin/inkscape
 export LILYPOND = /usr/bin/lilypond
 export GHOSTSCRIPT = /usr/bin/gs
-export SONGS = 03 13
+export SONGS = \
+	03-river\
+   	13-pretend
 
 
 all: covers all-songs
@@ -14,19 +16,25 @@ all: covers all-songs
 The_Listening.pdf : covers 13
 	$(GHOSTSCRIPT) -dSAFER -dBATCH -dNOPAUSE -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=The_Listening.pdf Cover/cover-front.ps 13-pretend/pretend.ps
 
+.PHONY: covers
 covers:
 	$(MAKE) -e -C Cover
+
+%.pdf : %.ly
+	$(LILYPOND) --pdf $<
 
 %.ps : %.ly
 	$(LILYPOND) --ps $<
 
 # Allow making all the individual songs at once
+
+.PHONY: all-songs $(SONGS)
 all-songs: $(SONGS)
 $(SONGS):
-	$(MAKE) -e -C $@-*
+	$(MAKE) -e -C $@
 
+.PHONY: clean
 clean:
 	-rm The_Listening.pdf
-	-rm [0-9][0-9]-*/*.pdf
-	-rm [0-9][0-9]-*/*.ps
-	-rm [0-9][0-9]-*/*.mid
+	-make -C Cover clean
+	-for dir in $(SONGS); do make -C $$dir clean; done
