@@ -1,5 +1,5 @@
-# gs -dSAFER -dBATCH -dNOPAUSE -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=output.pdf Cover/cover-front.ps 13-pretend/pretend.ps
-# ~/ink/bin/inkscape --export-eps=cover-front.eps --export-dpi=50 Cover.svg --export-area-page
+# gs -dSAFER -dBATCH -dNOPAUSE -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=output.pdf covers/cover-front.ps 13-pretend/pretend.ps
+# ~/ink/bin/inkscape --export-eps=cover-front.eps --export-dpi=50 covers.svg --export-area-page
 # lilypond --ps book.ps book.ly
 
 export DPI = 30
@@ -14,11 +14,11 @@ export SONGS = \
 all: covers all-songs
 
 The_Listening.pdf : covers 13
-	$(GHOSTSCRIPT) -dSAFER -dBATCH -dNOPAUSE -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=The_Listening.pdf Cover/cover-front.ps 13-pretend/pretend.ps
+	$(GHOSTSCRIPT) -dSAFER -dBATCH -dNOPAUSE -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=The_Listening.pdf covers/cover-front.ps 13-pretend/pretend.ps
 
 .PHONY: covers
 covers:
-	$(MAKE) -e -C Cover
+	$(MAKE) -e -C covers
 
 %.pdf : %.ly
 	$(LILYPOND) --pdf $<
@@ -36,5 +36,5 @@ $(SONGS):
 .PHONY: clean
 clean:
 	-rm The_Listening.pdf
-	-make -C Cover clean
+	-make -C covers clean
 	-for dir in $(SONGS); do make -C $$dir clean; done
