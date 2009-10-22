@@ -1,5 +1,15 @@
-h1. LIGHTS
+h1=. LIGHTS -- The Listening
 
-!readme.jpg! A test
+A small collection of sheet music for piano and vocalists, arranged just for you by "gcr":http://board.iamlights.com/index.php?/user/794-gcr/.
 
-(This cover ©2009 Lights Poxleitner)
+To compile a PDF of this booklet, you need:
+* lilypond (at least 2.12.1; the version in ubuntu jaunty)
+* inkscape (0.47 is best, but 0.46 might work too)
+* GNU make (I think)
+
+Run @make@. Go ahead and edit the @Makefile@ if you like.
+
+Please understand that it's all largely incomplete. Hope you enjoy what little I have!
+
+!http://github.com/hotdog003/Lights-listening/raw/master/readme.jpg(The Listening cover)!
+_(This cover and all the music here ©2009 Lights Poxleitner. Copied without permission.)_
