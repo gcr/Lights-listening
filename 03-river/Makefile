@@ -7,3 +7,6 @@ all: river.pdf
 
 %.pdf : %.ly
 	$(LILYPOND) --pdf $<
+
+clean:
+	-rm *.pdf *.ps *.mid
