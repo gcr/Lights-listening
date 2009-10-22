@@ -33,11 +33,6 @@
 }
 #(set-default-paper-size "letter")
 
-% Thanks to http://lsr.dsi.unimi.it/LSR/Item?id=328
-triplet = #(define-music-function (parser location music) (ly:music?)
-  #{ \times 2/3 $music #})
-
-
 chorustext = \lyricmode {
   It would be nice
   to start o -- ver a -- gain!
@@ -128,7 +123,7 @@ text = \lyricmode {
 
   % kid again
   % Curse you, measure 47!
-  \triplet {b8 a fis\)} r2 | % Voice
+  b16 a fis8\) r2 | % Voice
   <a, cis>2. ~ | % Treble
   fis2. ~ | % You get the idea.
 
@@ -138,12 +133,12 @@ text = \lyricmode {
   fis4.  e4. |
 
   % gets
-  fis8\( fis fis \triplet {fis e cis} cis |
+  fis8\( fis fis fis16 e cis8 cis |
   <d fis>2. |
   b'2. |
 
   % body
-  e8 e e \triplet {e8 cis b ~ } b8\) |
+  e8 e e e16 cis b4\) |
   <cis e>2. |
   a2. |
 
@@ -168,7 +163,7 @@ text = \lyricmode {
   <gis b>4. <gis b> |
 
   % innocence
-  b8 \triplet {b a fis\) ~}  fis4.\p |
+  b8 b16 a fis2\)\p |
   cis4. cis |
   <fis a>4. <fis a> |
 
@@ -178,12 +173,12 @@ text = \lyricmode {
   <fis a> <e a> |
 
   % I were
-  fis8\(\mp fis fis \triplet {fis e cis8\)} cis8 |
+  fis8\(\mp fis fis fis16 e cis8\) cis8 |
   <d fis>4.\> <d fis> |
   b' b |
   
   % without
-  e8\( e e \triplet {e cis cis ~ } cis ~ |
+  e8\( e e e cis16 cis8. ~ |
   <cis e>4. <cis e> |
   a a |
 
@@ -301,7 +296,7 @@ text = \lyricmode {
 
   % gratitude
   % Curse you, measure 47!
-  \triplet {b8 a fis ~ } fis4\) r |
+  b16 a fis8 ~\) fis4 r4 |
   <a cis>4. <a cis> |
   fis'4. fis |
 
@@ -311,12 +306,12 @@ text = \lyricmode {
   fis4. e |
 
   % worst they could
-  fis'8\( fis fis \triplet {fis e cis ~ } cis\) |
+  fis'8\( fis fis fis e16 cis8.\) |
   <d fis>4. <d fis> |
   b'4. b |
 
   % was check your
-  e8\( e e \triplet {e cis b ~ } b8 ~ |
+  e8\( e e e cis16 b8. ~ |
   <cis e>4. <cis e> |
   a4. a |
 
@@ -326,7 +321,7 @@ text = \lyricmode {
   <e gis>4. <e a> |
 
   % Yeah, when
-  r4 b16 a e'8\( cis b |
+  r8 b a e'\( cis b |
   b4. b |
   <e gis>4. <e gis> |
 
@@ -350,7 +345,7 @@ text = \lyricmode {
   % alone cost AN HOUR of my time, and I would have been FINISHED by now.
 
   % Oh well, It's all par for the course, isn't it?
-  \triplet {b8 a fis ~ } fis2\) ~ |
+  b8 a fis2\) ~ |
   <fis a cis>4. <fis a cis> |
   fis2. |
 
@@ -365,13 +360,13 @@ text = \lyricmode {
 
   % How we lost hold -- this one is odd because the "How" falls on beat one
   % instead of the last beat in the prev. measure
-  fis'8\( fis fis \triplet { fis e cis ~ } cis8\) |
+  fis'8\( fis fis fis e16 cis8.\) |
   r4. <b' d fis> |
   % sooo many fiss!
   b2. |
 
   % I guess I'll
-  e8\( e e \triplet {e cis\) cis ~ } cis8( |
+  e8\( e e e cis16\) cis8.( |
   << {<cis fis>4.\(\arpeggio <cis e>\)} \\ {a2.\arpeggio\p} >> |
   % note to self: make this A quiet, pick apart a hundred flowers
   a2.\arpeggio |
