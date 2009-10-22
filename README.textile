@@ -2,14 +2,18 @@ h1=. LIGHTS -- The Listening
 
 A small collection of sheet music for piano and vocalists, arranged just for you by "gcr":http://board.iamlights.com/index.php?/user/794-gcr/.
 
-To compile a PDF of this booklet, you need:
-* lilypond (at least 2.12.1; the version in ubuntu jaunty)
-* inkscape (0.47 is best, but 0.46 might work too)
-* GNU make (I think)
+To do anything at all with this music, you need:
+* lilypond (Please use at least 2.12.1; the version in ubuntu jaunty)
 
-Run @make@. Go ahead and edit the @Makefile@ if you like.
+To render the complete booklet, you also need:
+* inkscape (for rendering the front and back covers. 0.47 is best, but 0.46 might work too)
+* imagemagick (for converting the front and back covers into PDFs for ghostscript- very odd, I know)
+* ghostscript (for splicing all the PDFs together)
+* GNU make (to tie it all together)
 
-Please understand that it's all largely incomplete. Hope you enjoy what little I have!
+To get the whole shebang, run @make@. If you just want an invididual piece, go to that song's folder and run @make@ inside there.
+
+Please understand that it's all largely incomplete. Sorry to disappoint with so little; perhaps one day I can make things right?
 
 !http://github.com/hotdog003/Lights-listening/raw/master/readme.jpg(The Listening cover)!
 _(This cover and all the music here ©2009 Lights Poxleitner. Copied without permission.)_
