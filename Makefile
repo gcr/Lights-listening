@@ -11,9 +11,9 @@ export SONGS = \
    	13-pretend
 
 
-all: covers all-songs
+all: all-songs covers The_Listening.pdf
 
-The_Listening.pdf : covers 13
+The_Listening.pdf : covers book.ps
 	$(GHOSTSCRIPT) -dSAFER -dBATCH -dNOPAUSE -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=The_Listening.pdf covers/cover-front.ps 13-pretend/pretend.ps
 
 .PHONY: covers
