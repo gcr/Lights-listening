@@ -9,9 +9,9 @@ export GHOSTSCRIPT = /usr/bin/gs
 export SONGS = 03 13
 
 
-all: covers individ-songs
+all: covers all-songs
 
-The_Listening.pdf : covers
+The_Listening.pdf : covers 13
 	$(GHOSTSCRIPT) -dSAFER -dBATCH -dNOPAUSE -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=The_Listening.pdf Cover/cover-front.ps 13-pretend/pretend.ps
 
 covers:
@@ -21,11 +21,12 @@ covers:
 	$(LILYPOND) --ps $<
 
 # Allow making all the individual songs at once
-individ-songs: $(SONGS)
+all-songs: $(SONGS)
 $(SONGS):
 	$(MAKE) -e -C $@-*
 
 clean:
 	-rm The_Listening.pdf
-	make -C Cover clean
-	-rm *-*/*.pdf *-*/*.ps
+	-rm [0-9][0-9]-*/*.pdf
+	-rm [0-9][0-9]-*/*.ps
+	-rm [0-9][0-9]-*/*.mid
