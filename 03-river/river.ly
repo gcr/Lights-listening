@@ -97,6 +97,7 @@ text = \lyricmode {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 lightsVoice = \relative c'' {
+  c
 }
 
 pianoRH = {
