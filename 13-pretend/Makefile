@@ -1,6 +1,6 @@
 LILYPOND = /usr/bin/lilypond
 
-all: pretend.pdf
+all: pretend.pdf pretend.ps
 
 %.ps : %.ly
 	$(LILYPOND) --ps $<

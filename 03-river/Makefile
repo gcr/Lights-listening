@@ -1,6 +1,6 @@
 LILYPOND = /usr/bin/lilypond
 
-all: river.pdf
+all: river.pdf river.ps
 
 %.ps : %.ly
 	$(LILYPOND) --ps $<

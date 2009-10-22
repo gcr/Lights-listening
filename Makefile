@@ -2,7 +2,7 @@
 # ~/ink/bin/inkscape --export-eps=cover-front.eps --export-dpi=50 covers.svg --export-area-page
 # lilypond --ps book.ps book.ly
 
-export DPI = 30
+export DPI = 90
 export INKSCAPE = /usr/local/bin/inkscape
 export LILYPOND = /usr/bin/lilypond
 export GHOSTSCRIPT = /usr/bin/gs
@@ -10,11 +10,10 @@ export SONGS = \
 	03-river\
    	13-pretend
 
-
 all: all-songs covers The_Listening.pdf
 
 The_Listening.pdf : covers book.ps
-	$(GHOSTSCRIPT) -dSAFER -dBATCH -dNOPAUSE -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=The_Listening.pdf covers/cover-front.ps 13-pretend/pretend.ps
+	$(GHOSTSCRIPT) -dSAFER -dBATCH -dNOPAUSE -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=The_Listening.pdf covers/cover-front-$(DPI).ps 13-pretend/pretend.ps
 
 .PHONY: covers
 covers:
