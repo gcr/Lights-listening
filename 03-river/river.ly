@@ -20,11 +20,15 @@
 %}
 
 \header {
-  title       = "River"
-  composer    = "Lights"
-  %arranger    = "gcr"
-  opus        = "The Listening"
-  %instrument  = "Piano"
+  title         = "River"
+  tagline       = \markup { 
+    All music copyright ©2009 by Lights Poxleitner.
+    Engraving by GNU Lilypond -- www.lilypond.org 
+  }
+  composer      = "Lights"
+  %arranger      = "gcr"
+  opus          = "The Listening"
+  %instrument    = "Piano"
 }
 #(set-default-paper-size "letter")
 

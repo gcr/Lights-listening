@@ -20,16 +20,20 @@
 %}
 
 \header {
-  title       = "Pretend"
-  subtitle    = "(Reprise)"
-  composer    = "Lights"
-  %arranger    = "gcr"
-  opus        = "The Listening"
-  %instrument  = "Piano"
-  %meter       = \markup { \italic { Comfortable and honest } }
+  title         = "Pretend"
+  subtitle      = "(Reprise)"
+  composer      = "Lights"
+  tagline       = \markup { 
+    All music copyright ©2009 by Lights Poxleitner.
+    Engraving by GNU Lilypond -- www.lilypond.org 
+  }
+  %arranger      = "gcr"
+  opus          = "The Listening"
+  %instrument    = "Piano"
+  %meter         = \markup { \italic { Comfortable and honest } }
   % the below should actually be the meter, but I don't like how that's set on
   % the page and am too lazy to override the defaults. Ha.
-  piece       = \markup { \italic { Comfortable and honest } }
+  piece         = \markup { \italic { Comfortable and honest } }
 }
 #(set-default-paper-size "letter")
 
