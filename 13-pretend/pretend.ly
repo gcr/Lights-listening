@@ -19,25 +19,7 @@
 
 %}
 
-\header {
-  title         = "Pretend"
-  subtitle      = "(Reprise)"
-  composer      = "Lights"
-  tagline       = \markup { 
-    All music copyright ©2009 by Lights Poxleitner.
-    Engraving by GNU Lilypond -- www.lilypond.org 
-  }
-  %arranger      = "gcr"
-  opus          = "The Listening"
-  %instrument    = "Piano"
-  %meter         = \markup { \italic { Comfortable and honest } }
-  % the below should actually be the meter, but I don't like how that's set on
-  % the page and am too lazy to override the defaults. Ha.
-  piece         = \markup { \italic { Comfortable and honest } }
-}
-#(set-default-paper-size "letter")
-
-chorustext = \lyricmode {
+PretendChorusText = \lyricmode {
   It would be nice
   to start o -- ver a -- gain!
   Be- fore we were men.
@@ -46,7 +28,7 @@ chorustext = \lyricmode {
 }
 
 % Thanks to http://www.songlyrics.com/lights/pretend-lyrics/
-text = \lyricmode {
+PretendText = \lyricmode {
   Once in a while, I act like a child
   to feel like a kid a -- gain.
 
@@ -62,7 +44,7 @@ text = \lyricmode {
   Wish I were a lit -- tle girl
   with -- out the weight of the world.
 
-  \chorustext
+  \PretendChorusText
 
   Re -- mem -- ber the time
   we had so -- da for wine
@@ -78,7 +60,7 @@ text = \lyricmode {
   How we lost hold of home,
   I guess I'l ne -- ver know! __ __
 
-  \chorustext
+  \PretendChorusText
   And when it's the end,
   our lives will make sense.
   We'll love, we'll bend;
@@ -94,7 +76,7 @@ text = \lyricmode {
 }
 
 %%%%%%%%%%%%%%%%%%%
-\parallelMusic #'(introRH introLH) { 
+\parallelMusic #'(PretendIntroRH PretendIntroLH) { 
   % Odd stuff here. What I'm doing is I'm asking nicely for lp to allow me to
   % compose one measure of vocals followed by one measure of treble followed by
   % one measure of bass clef. It's faster for me to do it this way than to
@@ -114,7 +96,7 @@ text = \lyricmode {
   a2. <cis gis'> fis( <e gis>) | % Bass
 }
 
-\parallelMusic #'(melodyVoiceA melodyRHa melodyLHa) { 
+\parallelMusic #'(PretendMelodyVoiceA PretendMelodyRHa PretendMelodyLHa) { 
   % while, I act like a...
   cis4\) a8 e'\( cis b |  % Voice
   <cis e>2. | % Treble
@@ -202,7 +184,7 @@ text = \lyricmode {
   a,2. |
 }
 
-\parallelMusic #'(chorusVoiceA chorusRHa chorusLHa) {
+\parallelMusic #'(PretendChorusVoiceA PretendChorusRHa PretendChorusLHa) {
   % Starting at an odd place so I can reuse the vocals again.
   % over a-
   b'4\( gis e\) |
@@ -244,7 +226,7 @@ text = \lyricmode {
   <e gis>2. |
 }
 
-\parallelMusic #'(melodyVoiceB melodyRHb melodyLHb) {
+\parallelMusic #'(PretendMelodyVoiceB PretendMelodyRHb PretendMelodyLHb) {
   % ~end.
   a2. |
   <a cis e>4. <a cis e>4. |
@@ -398,7 +380,7 @@ text = \lyricmode {
 }
 
 % Too bad I can't simply copy this. Wait- actually, I bet I can.
-\parallelMusic #'(chorusRHb chorusLHb) {
+\parallelMusic #'(PretendChorusRHb PretendChorusLHb) {
   % over a-
   <cis e>4. <cis e> |
   cis'2. |
@@ -438,7 +420,7 @@ text = \lyricmode {
   cis2. |
 }
 
-\parallelMusic #'(chorusRHoutro chorusLHoutro) {
+\parallelMusic #'(PretendChorusRHoutro PretendChorusLHoutro) {
   % end, our
   <fis a cis>4. <fis a cis>|
   \ottava #-1 fis,,2. \ottava #0 |
@@ -467,7 +449,7 @@ text = \lyricmode {
   gis2. |
 }
 
-\parallelMusic #'(outroVoice melodyRHoutro melodyLHoutro) {
+\parallelMusic #'(PretendOutroVoice PretendMelodyRHoutro PretendMelodyLHoutro) {
   % ~end
   a2. ~ |
   <cis e>4. <a cis e> |
@@ -558,87 +540,42 @@ text = \lyricmode {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-lightsVoice = \relative c'' {
+PretendLyricsNotes = \relative c'' {
   r2. r2. r2. r2.
   r2. r2. r2. r4.
   e8\(\mp cis b |
-  \melodyVoiceA
-  \chorusVoiceA
-  \melodyVoiceB
-  \chorusVoiceA % whoo! I can recycle this!
+  \PretendMelodyVoiceA
+  \PretendChorusVoiceA
+  \PretendMelodyVoiceB
+  \PretendChorusVoiceA % whoo! I can recycle this!
   a4. r4 e'8 |
-  \chorusVoiceA % whoo! I can recycle this!
-  \outroVoice
+  \PretendChorusVoiceA % whoo! I can recycle this!
+  \PretendOutroVoice
   \bar "|."
 }
 
-pianoRH = {
+PretendPianoRH = {
   \relative c' {
-    \introRH
-    \melodyRHa
-    \chorusRHa
-    \melodyRHb
-    \chorusRHb
-    \chorusRHoutro
-    \melodyRHoutro
+    \PretendIntroRH
+    \PretendMelodyRHa
+    \PretendChorusRHa
+    \PretendMelodyRHb
+    \PretendChorusRHb
+    \PretendChorusRHoutro
+    \PretendMelodyRHoutro
     \bar "|."
   }
 }
-pianoLH = {
+PretendPianoLH = {
   \relative c {
-    \introLH
-    \melodyLHa
-    \chorusLHa
-    \melodyLHb
-    \chorusLHb
-    \chorusLHoutro
-    \melodyLHoutro
+    \PretendIntroLH
+    \PretendMelodyLHa
+    \PretendChorusLHa
+    \PretendMelodyLHb
+    \PretendChorusLHb
+    \PretendChorusLHoutro
+    \PretendMelodyLHoutro
     \bar "|."
   }
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-\score { <<
-  % if I add chord names, I'll put them here.
-% \new ChordNames = "chords" \with {  } {
-%   \harmonies
-% }
-  \new Staff = "lyrics" <<
-    % uncomment below to add bar numbers at every measure.
-    %\override Score.BarNumber #'break-visibility = #end-of-line-invisible
-
-    \time 6/8
-    \tempo 4. = 60
-
-    \key a \major
-    \new Voice = "lights"  {
-      \lightsVoice
-    }
-    \new Lyrics \lyricsto "lights" {
-      \autoBeamOff
-      \text
-    }
-
-    \new PianoStaff  = "piano" \with { connectArpeggios = ##t } <<
-      \new Staff = "upper" {
-        \key a \major
-        \clef treble
-        \pianoRH
-      }
-      \new Staff = "lower" {
-        \key a \major
-        \clef bass
-        \pianoLH
-      }
-    >>
-  >>
->> }
-
-%{
-            _______      
-           / ____(_)___  
-          / /_  / / __ \ 
-         / __/ / / / / / 
-        /_/   /_/_/ /_(_)
-
-%}

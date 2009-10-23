@@ -8,23 +8,23 @@
       title = "River"
     }
     \score { <<
-      \new Staff = "lyrics" <<
+      \new Staff <<
         \time 8/8
         \key c \major
-        \new Voice = "lights"  {
+        \new Voice = "RiverLights"  {
           \RiverLyricNotes
         }
-        \new Lyrics \lyricsto "lights" {
+        \new Lyrics \lyricsto "RiverLights" {
           \autoBeamOff
           \RiverText
         }
-        \new PianoStaff  = "piano" \with { connectArpeggios = ##t } <<
-          \new Staff = "upper" {
+        \new PianoStaff \with { connectArpeggios = ##t } <<
+          \new Staff {
             \key a \major
             \clef treble
             \RiverPianoRH
           }
-          \new Staff = "lower" {
+          \new Staff {
             \key a \major
             \clef bass
             \RiverPianoLH
