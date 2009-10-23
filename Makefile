@@ -10,9 +10,9 @@
 
 
 export DPI = 90
-export INKSCAPE = /usr/local/bin/inkscape
-export LILYPOND = /usr/bin/lilypond
-export GHOSTSCRIPT = /usr/bin/gs
+export INKSCAPE = inkscape
+export LILYPOND = lilypond
+export GHOSTSCRIPT = gs
 export SONGS = \
 	03-river\
    	13-pretend
