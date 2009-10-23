@@ -5,6 +5,10 @@
 
 #(set-default-paper-size "letter")
 
+\paper{  
+  print-first-page-number = ##t 
+}
+
 \book {
   \markuplines \table-of-contents
   \pageBreak
@@ -18,7 +22,13 @@
   \bookpart {
     \tocItem \markup "03 - River"
     \header {
-      title = "River"
+      title         = "River"
+      tagline       = \markup { 
+        All music copyright ©2009 by Lights Poxleitner.
+        Engraving by GNU Lilypond -- www.lilypond.org 
+      }
+      composer      = "Lights"
+      opus          = "The Listening"
     }
     \score { <<
       \new Staff <<
@@ -58,9 +68,16 @@
   \bookpart {
     \tocItem \markup "13 - Pretend (Reprise)"
     \header {
-      title = "Pretend"
-      subtitle = "(Reprise)"
-    }
+      title         = "Pretend"
+      subtitle      = "(Reprise)"
+      tagline       = \markup { 
+        All music copyright ©2009 by Lights Poxleitner.
+        Engraving by GNU Lilypond -- www.lilypond.org 
+      }
+      composer      = "Lights"
+      opus          = "The Listening"
+      piece         = \markup { \italic { Comfortable and honest } }
+    } 
     \score { <<
       \new Staff = "lyrics" <<
         \time 6/8
