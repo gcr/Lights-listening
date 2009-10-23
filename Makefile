@@ -27,7 +27,7 @@ final: export DPI = 300
 final: The_Listening.pdf
 
 The_Listening.pdf : covers book.ps
-	$(GHOSTSCRIPT) -dSAFER -dBATCH -dNOPAUSE -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=The_Listening.pdf covers/cover-front-$(DPI).ps 13-pretend/pretend.ps
+	$(GHOSTSCRIPT) -dSAFER -dBATCH -dNOPAUSE -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=The_Listening.pdf covers/cover-front-$(DPI).ps book.ps
 
 # Make the high quality front and back covers
 .PHONY: covers
