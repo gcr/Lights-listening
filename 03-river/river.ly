@@ -34,7 +34,7 @@
 
 % Lyrics graciously provided by
 % http://www.iamlights.com/discography/album/listening/river
-chorustext = \lyricmode {
+RiverChorustext = \lyricmode {
   Take ma, ri -- ver!
   Car -- ry me far!
   Lead me, ri -- ver
@@ -43,7 +43,7 @@ chorustext = \lyricmode {
   Lead me to some o -- ther un -- known.
   Put me in the un -- der -- tow.
 }
-text = \lyricmode {
+RiverText = \lyricmode {
   %{ 
     I've got a lov -- e -- ly bunch of co -- co -- nuts,
     There they are a- stan -- ding in a row!
@@ -63,7 +63,7 @@ text = \lyricmode {
 
   Come and stum -- ble me!
 
-  \chorustext
+  \RiverChorustext
 
   Such are the things that make a 
   king -- dom rum -- ble and shat -- ter;
@@ -76,7 +76,7 @@ text = \lyricmode {
 
   Come and hum -- ble me!
 
-  \chorustext
+  \RiverChorustext
 
   I wan -- na go where you're go -- ing;
   a fol -- low -- er fol -- low -- ing.
@@ -86,70 +86,28 @@ text = \lyricmode {
   % one is it? ONLY LIGHTS KNOWS, MUAHAHAHA. This is why this is unnoficial
   % music, yo.
 
-  \chorustext
+  \RiverChorustext
 
 
 }
 
 %%%%%%%%%%%%%%%%%%%
-\parallelMusic #'(introRH introLH) {
+\parallelMusic #'(RiverIntroRH RiverIntroLH) {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-lightsVoice = \relative c'' {
+RiverLyricNotes = \relative c'' {
   c
 }
 
-pianoRH = {
+RiverPianoRH = {
   \relative c' {
-    \introRH
+    \RiverIntroRH
   }
 }
-pianoLH = {
+RiverPianoLH = {
   \relative c {
-    \introLH
+    \RiverIntroLH
   }
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-\score { <<
-  \new Staff = "lyrics" <<
-    % uncomment below to add bar numbers at every measure.
-    %\override Score.BarNumber #'break-visibility = #end-of-line-invisible
-
-    % Each measure should consist of eight 8th notes, hence 8/8
-    \time 8/8
-    %\tempo 4. = 60
-
-    \key c \major
-    \new Voice = "lights"  {
-      \lightsVoice
-    }
-    \new Lyrics \lyricsto "lights" {
-      \autoBeamOff
-      \text
-    }
-
-    \new PianoStaff  = "piano" \with { connectArpeggios = ##t } <<
-      \new Staff = "upper" {
-        \key a \major
-        \clef treble
-        \pianoRH
-      }
-      \new Staff = "lower" {
-        \key a \major
-        \clef bass
-        \pianoLH
-      }
-    >>
-  >>
->> }
-
-%{
-            _______      
-           / ____(_)___  
-          / /_  / / __ \ 
-         / __/ / / / / / 
-        /_/   /_/_/ /_(_)
-
-%}
