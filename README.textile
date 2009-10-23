@@ -7,12 +7,13 @@ To do anything at all with this music, you need:
 
 To render the complete booklet, you also need:
 * inkscape (for rendering the front and back covers. 0.47 is best, but 0.46 might work too)
+* Microsoft core True Type fonts (her logo is in Impact; not required, but it looks funny without this)
 * imagemagick (for converting the front and back covers into PDFs for ghostscript- very odd, I know)
 * ghostscript (for splicing all the PDFs together)
 * GNU make (to tie it all together)
 
 If you're on ubuntu, do this:
-<pre><code>sudo aptitude install inkscape imagemagick ghostscript make lilypond</code></pre>
+<pre><code>sudo aptitude install inkscape imagemagick msttcorefonts ghostscript make lilypond</code></pre>
 
 To make all the songs and produce individual .PDF files of them, run @make all-songs@. Or, run @make final@ to produce The_Listening.pdf, a .PDF file of every song along with a table of contents. If you want to change the DPI the front and back covers are rendered at, run @make DPI=600 final@. It will take a big long while for everything to render at any DPI above 150 or so, so grab a cup of coffee, eat some lunch, go on a jog, file your income tax returns, start a family, etc., and by the time you're done with all that, it'll be finished and Lights will probably have released about ten other albums.
 
