@@ -1,5 +1,22 @@
 \include "river.ly"
 
+%%%%%%%%%%%%%%%%%%%%%%%
+% This file just has the structure and layout. Check out the actual notes
+% in river.ly
+
+\header {
+  title         = "River"
+  tagline       = \markup { 
+    All music copyright ©2009 by Lights Poxleitner.
+    Engraving by GNU Lilypond -- www.lilypond.org 
+  }
+  composer      = "Lights"
+  %arranger      = "gcr"
+  opus          = "The Listening"
+  %instrument    = "Piano"
+}
+#(set-default-paper-size "letter")
+
 %%%%%%%%%%%%%%%%%%%%%%%%
 \score { <<
   \new Staff = "lyrics" <<

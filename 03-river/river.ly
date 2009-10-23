@@ -19,19 +19,6 @@
 
 %}
 
-\header {
-  title         = "River"
-  tagline       = \markup { 
-    All music copyright ©2009 by Lights Poxleitner.
-    Engraving by GNU Lilypond -- www.lilypond.org 
-  }
-  composer      = "Lights"
-  %arranger      = "gcr"
-  opus          = "The Listening"
-  %instrument    = "Piano"
-}
-#(set-default-paper-size "letter")
-
 % Lyrics graciously provided by
 % http://www.iamlights.com/discography/album/listening/river
 RiverChorustext = \lyricmode {
@@ -93,6 +80,8 @@ RiverText = \lyricmode {
 
 %%%%%%%%%%%%%%%%%%%
 \parallelMusic #'(RiverIntroRH RiverIntroLH) {
+  c d e f|
+  g a b c|
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
