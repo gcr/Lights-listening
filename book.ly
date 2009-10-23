@@ -3,6 +3,8 @@
 \include "03-river/river.ly"
 \include "13-pretend/pretend.ly"
 
+#(set-default-paper-size "letter")
+
 \book {
   \markuplines \table-of-contents
   \pageBreak
