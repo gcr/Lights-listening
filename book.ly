@@ -43,12 +43,12 @@
         }
         \new PianoStaff \with { connectArpeggios = ##t } <<
           \new Staff {
-            \key a \major
+            \key c \major
             \clef treble
             \RiverPianoRH
           }
           \new Staff {
-            \key a \major
+            \key c \major
             \clef bass
             \RiverPianoLH
           }
