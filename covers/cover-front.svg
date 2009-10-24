@@ -31187,18 +31187,6 @@
        sodipodi:type="inkscape:persp3d" />
     <filter
        inkscape:collect="always"
-       id="filter11234"
-       x="-0.072129061"
-       width="1.1442581"
-       y="-0.23545624"
-       height="1.4709125">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="5.7997544"
-         id="feGaussianBlur11236" />
-    </filter>
-    <filter
-       inkscape:collect="always"
        id="filter11322"
        x="-0.15387533"
        width="1.3077507"
@@ -31298,11 +31286,11 @@
      objecttolerance="10"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.99738562"
-     inkscape:cx="452.63982"
-     inkscape:cy="388.30963"
+     inkscape:zoom="0.5"
+     inkscape:cx="862.51723"
+     inkscape:cy="549.91991"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer5"
      showgrid="false"
      units="in"
      inkscape:window-width="1278"
@@ -31362,7 +31350,8 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Stars"
-     style="display:inline;filter:url(#filter11341)">
+     style="display:inline;filter:url(#filter11341)"
+     sodipodi:insensitive="true">
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:none"
        d="M 0.24445287,-7.0301888 -1.1283912,-0.90983103 -7.2468682,0.46301379 -1.1283912,1.8358586 0.24445287,7.9543348 1.6172969,1.8358586 7.7357742,0.46301379 1.6172969,-0.90983103 0.24445287,-7.0301888 z"
@@ -37270,7 +37259,7 @@
        xlink:href="#rect83638"
        transform="matrix(0.00111351,-0.579859,0.579859,0.00111351,406.57062,702.93337)"
        id="use88553"
-       style="opacity:0.42857143"
+       style="opacity:0.42857145"
        width="765"
        height="990" />
     <use
@@ -38923,13 +38912,13 @@
     <image
        sodipodi:absref="/home/michael/Documents/Songs/lights/covers/lights15.jpg"
        xlink:href="lights15.jpg"
-       y="17.623291"
-       x="-375.56909"
-       id="image83634"
-       height="972.37671"
-       width="1716.1382"
+       transform="matrix(1,0,0,1.0181239,0,-17.942694)"
        style="fill-opacity:1;display:inline;filter:url(#filter11044)"
-       transform="matrix(1,0,0,1.0181239,0,-17.942694)" />
+       width="1716.1382"
+       height="972.37671"
+       id="image83634"
+       x="-375.56909"
+       y="17.623291" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -38992,7 +38981,7 @@
     </g>
     <g
        id="g11583"
-       transform="matrix(0.5,-0.86602541,0.86602541,0.5,-426.74419,728.34212)"
+       transform="matrix(0.5,-0.86602541,0.86602541,0.5,-426.74419,768.79371)"
        style="filter:url(#filter83553)">
       <g
          transform="matrix(0.5,0.86602541,-0.86602541,0.5,809.79192,25.396983)"
@@ -39052,8 +39041,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Text"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <text
        xml:space="preserve"
        style="font-size:71.7671051px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Impact;-inkscape-font-specification:Impact Condensed"
@@ -39068,7 +39056,8 @@
          style="font-size:71.7671051px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Impact;-inkscape-font-specification:Impact Condensed">LIGHTS</tspan></text>
     <g
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:AR PL UMing CN;-inkscape-font-specification:AR PL UMing CN Light"
-       id="text10424">
+       id="text10424"
+       transform="translate(0,40.0282)">
       <path
          d="m 216.0083,763.37805 c -1e-5,1.69271 0.84634,2.53907 2.53906,2.53906 l 2.57813,0 0,0.66407 -12.26563,0 0,-0.66407 2.57813,0 c 1.6927,10e-6 2.53905,-0.84635 2.53906,-2.53906 l 0,-20.03906 -2.92969,0 c -2.10938,3e-5 -3.76302,1.41929 -4.96093,4.25781 l -0.42969,-0.15625 1.64062,-5 15.39063,0 1.64062,5 -0.46875,0.15625 c -1.17189,-2.83852 -2.81251,-4.25778 -4.92187,-4.25781 l -2.92969,0 0,20.03906"
          id="path11346" />
