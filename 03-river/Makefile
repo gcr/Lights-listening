@@ -2,10 +2,10 @@ LILYPOND = /usr/bin/lilypond
 
 all: river-for-piano.pdf
 
-%.ps : %.ly
+%.ps : *.ly
 	$(LILYPOND) --ps $<
 
-%.pdf : %.ly
+%.pdf : *.ly
 	$(LILYPOND) --pdf $<
 
 clean:
