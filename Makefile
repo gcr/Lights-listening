@@ -16,6 +16,9 @@ export GHOSTSCRIPT = gs
 export SONGS = \
 	03-river\
    	13-pretend
+# Options for ghostscript: Use lossless images
+export GSOPTS = -dSAFER -dBATCH -dNOPAUSE -dPDFSETTINGS=/prepress -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -sDEVICE=pdfwrite -sOutputFile=The_Listening.pdf covers/cover-front-$(DPI).ps book.ps
+
 
 # .PHONY means this target isn't associated with a real actual file.
 .PHONY: all
@@ -27,7 +30,7 @@ final: export DPI = 300
 final: The_Listening.pdf
 
 The_Listening.pdf : covers book.ps
-	$(GHOSTSCRIPT) -dSAFER -dBATCH -dNOPAUSE -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=The_Listening.pdf covers/cover-front-$(DPI).ps book.ps
+		$(GHOSTSCRIPT) $(GSOPTS)
 
 # Make the high quality front and back covers
 .PHONY: covers
