@@ -56,6 +56,10 @@ covers:
 %.ps : %.ly
 	$(LILYPOND) --ps $<
 
+# Special case: Our book also depends on every lilypond file in every directory.
+# Without this rule, if I changed some of the notes, it wouldn't get updated.
+book.ps : */*.ly
+
 # Allow making all the individual songs at once. You'll get .pdf files in every
 # directory.
 .PHONY: all-songs $(SONGS)
