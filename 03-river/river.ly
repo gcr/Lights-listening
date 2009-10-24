@@ -22,7 +22,7 @@
 % Lyrics graciously provided by
 % http://www.iamlights.com/discography/album/listening/river
 RiverChorustext = \lyricmode {
-  Take ma, ri -- ver!
+  Take me, ri -- ver!
   Car -- ry me far!
   Lead me, ri -- ver
   like a mo -- ther % I'm tempted to make a 'your mom' joke, but I hate those.
