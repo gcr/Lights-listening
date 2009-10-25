@@ -66,21 +66,59 @@ UpUpText = \lyricmode {
 
 %%%%%%%%%%%%%%%%%%%
 \parallelMusic #'(UpUpIntroRH UpUpIntroLH) {
-  c c c c |
-  c c c c |
+  % 1.
+  r8 f c' bes4 ees,8 bes' aes |
+  f2 ees |
+
+  % 2.
+  r8 c, ees aes g ees c r8 |
+  aes,2. ~ aes8 aes8 |
+
+  % 3.
+  r8 f c' bes4 ees,8 bes' aes |
+  f'2 ees |
+
+  % 4.
+  r8 c, ees aes8 ~ aes2 |
+  aes,1 |
 }
+
+UpUpVoiceA = {
+  % We had a rocket
+  f8 f f ees4 c4. ~ |
+  c2 r4. aes8 |
+
+  % that fell out of orbit
+  c8 c c bes4 aes4. ~ |
+  aes4 r2. |
+
+  % We couldn't stop it
+  f'8 f f ees16( f ees8) c4. ~ |
+  r2.. aes8 |
+  % FEAR the DOUBLE DOTTED HALF REST!
+
+  % couldn't control it.
+  c8 c c ees4 aes,4. ~ |
+  aes4 r2. |
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 UpUpLyricsNotes = \relative c'' {
-c
+  r1 r r r |
+  \UpUpVoiceA
 }
 
 UpUpPianoRH = \relative c' {
   \UpUpIntroRH
+  \UpUpIntroRH
+  \UpUpIntroRH
 }
 
-UpUpPianoLH = \relative c {
-  \UpUpIntroLH
+UpUpPianoLH = {
+  \relative c { \UpUpIntroLH }
+  \relative c { \UpUpIntroLH }
+  \relative c { \UpUpIntroLH }
 }
 
 

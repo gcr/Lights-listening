@@ -18,20 +18,20 @@
   \new Staff = "lyrics" <<
     \time 4/4
     \key aes \major
-    \new Voice = "lights"  {
+    \new Voice = "UpUpLights"  {
       \UpUpLyricsNotes
     }
-    \new Lyrics \lyricsto "lights" {
+    \new Lyrics \lyricsto "UpUpLights" {
       \autoBeamOff
       \UpUpText
     }
-    \new PianoStaff  = "piano" \with { connectArpeggios = ##t } <<
-      \new Staff = "upper" {
+    \new PianoStaff  = "UpUpPiano" \with { connectArpeggios = ##t } <<
+      \new Staff = "UpUpUpper" {
         \key aes \major
         \clef treble
         \UpUpPianoRH
       }
-      \new Staff = "lower" {
+      \new Staff = "UpUpLower" {
         \key aes \major
         \clef bass
         \UpUpPianoLH
