@@ -20,10 +20,48 @@
 %}
 
 UpUpChorusText = \lyricmode {
+  We are rock -- ets in the sky.
+  We are plan -- ets pass -- ing by.
+  Up up and a -- way!
+  For -- get me; go your own way.
 }
 
-% Thanks to http://www.songlyrics.com/lights/pretend-lyrics/
+% I got these lyrics by listening to the song. Thanks to Miss Lights for these
+% lyrics.
 UpUpText = \lyricmode {
+  We had a rock -- et
+  that fell out of or -- bit.
+  We could -- n't stop it;
+  we could -- n't con -- trol it.
+
+  We ran a good course.
+  It was a good flight.
+  But I felt a hard force
+  % heart?
+  hold -- ing me too tight.
+
+  \UpUpChorusText
+
+  Some -- times a heart cools
+  af -- ter the heat goes.
+  And_some -- times the mind fo -- ols;
+  on -- ly the bo -- dy knows.
+
+  \UpUpChorusText
+
+  % resting here
+
+  % \dreamy {
+  Up up and a -- way!
+  Up up and a -- way!
+  Up up and a -- way!
+  Up up and a -- way!
+  % }
+
+  \UpUpChorusText
+  \UpUpChorusText
+
+  % fin.
 }
 
 %%%%%%%%%%%%%%%%%%%
