@@ -16,7 +16,8 @@ export LILYPOND = lilypond
 export GHOSTSCRIPT = gs
 export SONGS = \
 	03-river\
-   	13-pretend
+   	13-pretend\
+	14-upupandaway
 export BOOK_PAGES = \
 	covers/cover-front-$(DPI).ps \
 	book.ps

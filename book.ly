@@ -105,4 +105,58 @@
       >>
     >> }
   }
+
+  %{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+ _ _  _      _   _         _   _            _              _ 
+/ | || |    | | | |_ __   | | | |_ __      / \   _ __   __| |
+| | || |_   | | | | '_ \  | | | | '_ \    / _ \ | '_ \ / _` |
+| |__   _|  | |_| | |_) | | |_| | |_) |  / ___ \| | | | (_| |
+|_|  |_|     \___/| .__/   \___/| .__/  /_/   \_\_| |_|\__,_|
+                  |_|           |_|                          
+                _                      
+               / \__      ____ _ _   _ 
+              / _ \ \ /\ / / _` | | | |
+             / ___ \ V  V / (_| | |_| |
+            /_/   \_\_/\_/ \__,_|\__, |
+                                 |___/ 
+  %}
+                                              
+  \bookpart {
+    \tocItem \markup "14 - Up Up and Away"
+    \header {
+      title         = "Up Up And Away"
+      tagline       = \markup { 
+        All music copyright ©2009 by Lights Poxleitner.
+        Engraving by GNU Lilypond -- www.lilypond.org 
+      }
+      composer      = "Lights"
+      opus          = "The Listening"
+      piece         = \markup { \italic { Dolce } }
+    } 
+    \score { <<
+      \new Staff = "lyrics" <<
+        \time 4/4
+        \key aes \major
+        \new Voice = "lights"  {
+          \UpUpLyricsNotes
+        }
+        \new Lyrics \lyricsto "lights" {
+          \autoBeamOff
+          \UpUpText
+        }
+        \new PianoStaff  = "piano" \with { connectArpeggios = ##t } <<
+          \new Staff = "upper" {
+            \key aes \major
+            \clef treble
+            \UpUpPianoRH
+          }
+          \new Staff = "lower" {
+            \key aes \major
+            \clef bass
+            \UpUpPianoLH
+          }
+        >>
+      >>
+    >> }
+}
 }
