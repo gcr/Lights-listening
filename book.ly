@@ -2,6 +2,7 @@
 
 \include "03-river/river.ly"
 \include "13-pretend/pretend.ly"
+\include "14-upupandaway/upupandaway.ly"
 
 #(set-default-paper-size "letter")
 
