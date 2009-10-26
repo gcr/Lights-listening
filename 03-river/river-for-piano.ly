@@ -32,7 +32,6 @@
       \RiverLyricNotes
     }
     \new Lyrics \lyricsto "lights" {
-      \autoBeamOff
       \RiverText
     }
 

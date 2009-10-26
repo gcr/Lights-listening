@@ -39,7 +39,6 @@
       \PretendLyricsNotes
     }
     \new Lyrics \lyricsto "lights" {
-      \autoBeamOff
       \PretendText
     }
 

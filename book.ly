@@ -39,7 +39,6 @@
           \RiverLyricNotes
         }
         \new Lyrics \lyricsto "RiverLights" {
-          \autoBeamOff
           \RiverText
         }
         \new PianoStaff \with { connectArpeggios = ##t } <<
@@ -88,7 +87,6 @@
           \PretendLyricsNotes
         }
         \new Lyrics \lyricsto "lights" {
-          \autoBeamOff
           \PretendText
         }
         \new PianoStaff  = "piano" \with { connectArpeggios = ##t } <<
@@ -142,7 +140,6 @@
           \UpUpLyricsNotes
         }
         \new Lyrics \lyricsto "lights" {
-          \autoBeamOff
           \UpUpText
         }
         \new PianoStaff  = "piano" \with { connectArpeggios = ##t } <<

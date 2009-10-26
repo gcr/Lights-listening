@@ -22,7 +22,6 @@
       \UpUpLyricsNotes
     }
     \new Lyrics \lyricsto "UpUpLights" {
-      \autoBeamOff
       \UpUpText
     }
     \new PianoStaff  = "UpUpPiano" \with { connectArpeggios = ##t } <<
