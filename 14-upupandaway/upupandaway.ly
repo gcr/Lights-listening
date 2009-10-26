@@ -72,7 +72,7 @@ UpUpText = \lyricmode {
 
   % 2.
   r8 c, ees aes g ees c r8 |
-  aes,2. ~ aes8 aes8 |
+  aes,2.. aes8 |
 
   % 3.
   r8 f c' bes4 ees,8 bes' aes |
