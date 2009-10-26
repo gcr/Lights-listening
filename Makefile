@@ -72,6 +72,7 @@ $(SONGS):
 .PHONY: clean-songs clean
 clean: clean-songs
 	-rm The_Listening.pdf
+	-rm book.ps
 	-make -C covers clean
 
 clean-songs:
