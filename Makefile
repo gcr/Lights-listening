@@ -69,8 +69,11 @@ $(SONGS):
 	$(MAKE) -e -C $@
 
 # Remove the unneeded files. Useful for git, etc.
-.PHONY: clean
-clean:
+.PHONY: clean-songs clean
+clean: clean-songs
 	-rm The_Listening.pdf
 	-make -C covers clean
+
+clean-songs:
 	-for dir in $(SONGS); do make -C $$dir clean; done
+
