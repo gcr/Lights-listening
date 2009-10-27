@@ -24,7 +24,10 @@
     %\override Score.BarNumber #'break-visibility = #end-of-line-invisible
 
     % Each measure should consist of eight 8th notes, hence 8/8
-    \time 8/8
+    % BZZT! WRONG. http://www.fretfeed.com/the-complete-guide-to-rhythm-and-time-signatures/
+    % 8/8 implies that a dotted quarter note gets the beat. This doesn't happen
+    % for this song.
+    \time 4/4
     %\tempo 4. = 60
 
     \key c \major

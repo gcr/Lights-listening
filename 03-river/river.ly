@@ -84,7 +84,7 @@ RiverVoiceA = \relative c'' {
   e8 e e e e c c f |
 
   % r watch
-  r8 f f f c c c e |
+  r8 f f f e e e e |
 
   % -mountains
   f8 f f f f d d e |

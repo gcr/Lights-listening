@@ -33,7 +33,7 @@
     }
     \score { <<
       \new Staff <<
-        \time 8/8
+        \time 4/4
         \key c \major
         \new Voice = "RiverLights"  {
           \RiverLyricNotes
