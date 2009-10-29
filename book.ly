@@ -24,12 +24,17 @@
     \tocItem \markup "03 - River"
     \header {
       title         = "River"
-      tagline       = \markup { 
-        All music copyright ©2009 by Lights Poxleitner.
-        Engraving by GNU Lilypond -- www.lilypond.org 
-      }
-      composer      = "Lights"
-      opus          = "The Listening"
+      composer      = "Composed by Lights"
+      arranger      = "Arranged for piano by gcr"
+      opus          = \markup { From \italic { The Listening } }
+      piece         = \markup { \italic { Dolce } }
+      tagline       = \markup { \column { \center-align {
+        \line { All music copyright ©2009 by Lights Poxleitner. No copyright
+        infringement is intended. }
+        \line { This document is completely unofficial and is in no way endorsed by
+        Lights. }
+        \line { Engraving by GNU Lilypond -- www.lilypond.org }
+      } } }
     }
     \score { <<
       \new Staff <<
@@ -70,13 +75,17 @@
     \header {
       title         = "Pretend"
       subtitle      = "(Reprise)"
-      tagline       = \markup { 
-        All music copyright ©2009 by Lights Poxleitner.
-        Engraving by GNU Lilypond -- www.lilypond.org 
-      }
-      composer      = "Lights"
-      opus          = "The Listening"
+      composer      = "Composed by Lights"
+      arranger      = "Arranged for piano by gcr"
+      opus          = \markup { From \italic { The Listening } }
       piece         = \markup { \italic { Comfortable and honest } }
+      tagline       = \markup { \column { \center-align {
+        \line { All music copyright ©2009 by Lights Poxleitner. No copyright
+        infringement is intended. }
+        \line { This document is completely unofficial and is in no way endorsed by
+        Lights. }
+        \line { Engraving by GNU Lilypond -- www.lilypond.org }
+      } } }
     } 
     \score { <<
       \new Staff = "lyrics" <<
@@ -124,13 +133,16 @@
     \tocItem \markup "14 - Up Up and Away"
     \header {
       title         = "Up Up And Away"
-      tagline       = \markup { 
-        All music copyright ©2009 by Lights Poxleitner.
-        Engraving by GNU Lilypond -- www.lilypond.org 
-      }
-      composer      = "Lights"
-      opus          = "The Listening"
-      piece         = \markup { \italic { Dolce } }
+      composer      = "Composed by Lights"
+      arranger      = "Arranged for piano by gcr"
+      opus          = \markup { From \italic { The Listening } }
+      tagline       = \markup { \column { \center-align {
+        \line { All music copyright ©2009 by Lights Poxleitner. No copyright
+        infringement is intended. }
+        \line { This document is completely unofficial and is in no way endorsed by
+        Lights. }
+        \line { Engraving by GNU Lilypond -- www.lilypond.org }
+      } } }
     } 
     \score { <<
       \new Staff = "lyrics" <<

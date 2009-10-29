@@ -4,13 +4,17 @@
 
 \header {
   title         = "Up Up And Away"
-  tagline       = \markup { 
-    All music copyright ©2009 by Lights Poxleitner.
-    Engraving by GNU Lilypond -- www.lilypond.org 
-  }
-  composer      = "Lights"
-  opus          = "The Listening"
-  piece         = \markup { \italic { Dolce } }
+  composer      = "Composed by Lights"
+  arranger      = "Arranged for piano by gcr"
+  opus          = \markup { From \italic { The Listening } }
+  %piece         = \markup { \italic { Dolce } }
+  tagline       = \markup { \column { \center-align {
+    \line { All music copyright ©2009 by Lights Poxleitner. No copyright
+      infringement is intended. }
+    \line { This document is completely unofficial and is in no way endorsed by
+      Lights. }
+    \line { Engraving by GNU Lilypond -- www.lilypond.org }
+  } } }
 } 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -5,13 +5,16 @@
 \header {
   title         = "Pretend"
   subtitle      = "(Reprise)"
-  composer      = "Lights"
-  tagline       = \markup { 
-    All music copyright ©2009 by Lights Poxleitner.
-    Engraving by GNU Lilypond -- www.lilypond.org 
-  }
-  %arranger      = "gcr"
-  opus          = "The Listening"
+  composer      = "Composed by Lights"
+  tagline       = \markup { \column { \center-align {
+    \line { All music copyright ©2009 by Lights Poxleitner. No copyright
+      infringement is intended. }
+    \line { This document is completely unofficial and is in no way endorsed by
+      Lights. }
+    \line { Engraving by GNU Lilypond -- www.lilypond.org }
+  } } }
+  arranger      = "Arranged for piano by gcr"
+  opus          = \markup { From \italic { The Listening } }
   %instrument    = "Piano"
   %meter         = \markup { \italic { Comfortable and honest } }
   % the below should actually be the meter, but I don't like how that's set on
