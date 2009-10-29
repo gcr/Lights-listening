@@ -9,8 +9,9 @@ all: cover-front-$(DPI).ps
 %.ps: %.png
 	$(CONVERT) $*.png $*.ps
 
-%.png: *.svg
-	$(INKSCAPE) --export-png=$(*).png --export-dpi=$(DPI) $(*:-$(DPI)=).svg --export-area-page
+# This rule says that cover-front-250.png should be built from cover-front.svg
+%-$(DPI).png: %.svg
+	$(INKSCAPE) --export-png=$@ --export-dpi=$(DPI) $< --export-area-page
 
 clean:
 	-rm cover-*.png cover-*.ps
