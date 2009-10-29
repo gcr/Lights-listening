@@ -42,24 +42,18 @@ final: export DPI = 300
 final: The_Listening.pdf
 
 # The PDF. We use ghostscript to build this.
-The_Listening.pdf : covers book.ps
+The_Listening.pdf : $(BOOK_PAGES)
 		$(GHOSTSCRIPT) $(GSOPTS)
 
-# Make the high quality front and back covers
+# Make the high quality front and back covers. Even though I'm explicitly asking
+# for a filename, this should get handled by the makefile in covers/
 .PHONY: covers
-covers:
+covers covers/%.ps: covers/*.svg
 	$(MAKE) -e -C covers
 
-# Teach make how to convert .ly files into .pdf files
-%.pdf : %.ly
-	$(LILYPOND) --pdf $<
-
-%.ps : %.ly
-	$(LILYPOND) --ps $<
-
-# Special case: Our book also depends on every lilypond file in every directory.
-# Without this rule, if I changed some of the notes, it wouldn't get updated.
-book.ps : */*.ly
+# The book.ps file depends on all the songs' .ly files.
+book.ps: book.ly $(patsubst %,%/*.ly,$(SONGS))
+	$(LILYPOND) -o book --ps $<
 
 # Allow making all the individual songs at once. You'll get .pdf files in every
 # directory.
@@ -70,11 +64,11 @@ $(SONGS):
 
 # Remove the unneeded files. Useful for git, etc.
 .PHONY: clean-songs clean
+clean-songs:
+	-for i in $(SONGS); do make -e -C $$i clean; done
+
 clean: clean-songs
 	-rm The_Listening.pdf
 	-rm book.ps
 	-make -C covers clean
-
-clean-songs:
-	-for dir in $(SONGS); do make -C $$dir clean; done
 
