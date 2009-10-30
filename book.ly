@@ -148,6 +148,7 @@
       \new Staff = "lyrics" <<
         \time 4/4
         \key aes \major
+        \tempo 4 = 114
         \new Voice = "lights"  {
           \UpUpLyricsNotes
         }
