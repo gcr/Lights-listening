@@ -65,7 +65,7 @@ UpUpText = \lyricmode {
 }
 
 %%%%%%%%%%%%%%%%%%%
-\parallelMusic #'(UpUpIntroRH UpUpIntroLH) {
+\parallelMusic #'(UpUpIntroRHA UpUpIntroLHA) {
   % 1.
   r8 f c' bes4 ees,8 bes' aes |
   f2 ees |
@@ -83,6 +83,14 @@ UpUpText = \lyricmode {
   aes,1 |
 }
 
+\parallelMusic #'(UpUpIntroRHB UpUpIntroLHB) {
+  r4 <aes c>8  <g bes>4.  <g bes>8 <ees aes>8 ~ |
+  << {s1}\\{ <f, f'>2 <ees ees'> } \\ { s8 c'4. s8 bes4. } >> |
+     % this blank voice here is to reverse the direction of the stems
+
+
+}
+
 UpUpVoiceA = {
   % We had a rocket
   f8 f f ees4 c4. ~ |
@@ -93,7 +101,7 @@ UpUpVoiceA = {
   aes4 r2. |
 
   % We couldn't stop it
-  f'8 f f ees16( f ees8) c4. ~ |
+  f'8 f f ees16( f ees8) c4. |
   r2.. aes8 |
   % FEAR the DOUBLE DOTTED HALF REST!
 
@@ -102,23 +110,44 @@ UpUpVoiceA = {
   aes4 r2. |
 }
 
+UpUpVoiceB = {
+  % We ran a good course
+  f'8 f f ees4 c4. ~ |
+  c2 r2 |
+
+  % it was a good flight ...but
+  c8 c c ees4 aes,4. ~ |
+  aes4. r2 c8 |
+
+  % I felt a hard force
+  f8 f f ees16( f ees8) c4( bes8) ~|
+  bes2 r2 |
+
+  % holding me too tight. We are
+  c8 c c ees4 aes,4. ~ |
+  aes4 r2 c8 ees |
+
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 UpUpLyricsNotes = \relative c'' {
   r1 r r r |
   \UpUpVoiceA
+  \UpUpVoiceB
 }
 
 UpUpPianoRH = \relative c' {
-  \UpUpIntroRH
-  \UpUpIntroRH
-  \UpUpIntroRH
+  \UpUpIntroRHA
+  \UpUpIntroRHA
+  \UpUpIntroRHA
+  \UpUpIntroRHB
 }
 
 UpUpPianoLH = {
-  \relative c { \UpUpIntroLH }
-  \relative c { \UpUpIntroLH }
-  \relative c { \UpUpIntroLH }
+  \relative c { \UpUpIntroLHA }
+  \relative c { \UpUpIntroLHA }
+  \relative c { \UpUpIntroLHA }
+  \relative c { \UpUpIntroLHB }
 }
 
 
