@@ -88,7 +88,16 @@ UpUpText = \lyricmode {
   << {s1}\\{ <f, f'>2 <ees ees'> } \\ { s8 c'4. s8 bes4. } >> |
      % this blank voice here is to reverse the direction of the stems
 
+  r8 c ees aes4. g4 |
+  <aes ees'>1 |
 
+  r4 <aes c>8  <g ees'>4.  <g ees'>8 <ees c'>8 ~ |
+  << {s1}\\{ <f f'>2 <ees ees'> } \\ { s8 c'4. s8 bes4. } >> |
+     % this blank voice here is to reverse the direction of the stems
+
+  \set tieWaitForNote = ##t % broken ties
+  <ees c'>8 bes ~ c ~ ees8 ~ <bes c ees>2 |
+  <aes ees'>1 |
 }
 
 UpUpVoiceA = {
