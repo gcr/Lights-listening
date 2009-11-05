@@ -38,7 +38,7 @@ RiverText = \lyricmode {
   %} 
   % ...no, that doesn't seem right, maybe I should listen to it more closely.
 
-  Out ac -- cross cit -- ties, I see 
+  Out ac -- cross cit -- ies, I see 
   buil -- dings burn in -- to pi -- les
   and watch the world in won -- der as 
   moun -- tains turn in -- to ti -- les
@@ -78,7 +78,7 @@ RiverText = \lyricmode {
 
 RiverVoiceA = \relative c'' {
   % Out 
-  e8 e e e c c c d |
+  d8 e e e c c c d |
   
   % -dings
   e8 e e e e c c f |
@@ -158,24 +158,28 @@ RiverVoiceSlow = \relative c' {
 
 %%%%%%%%%%%%%%%%%%%
 \parallelMusic #'(RiverIntroRH RiverIntroLH) {
-  r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  r4
+  % Intro
+  r8 g' e e'4 g,8 c4 ~ |
+  c'2        r2 |
+
+  c8 g e c'4 f,8 g4 ~ |
+  c2.             b8 g |
+
+  r8 g f g'4 a,8 f'4 ~ |
+  f2..              e8 |
+
+  r8 g, f e'4 a,8 c4 |
+  <f a>2.        a8 g8 |
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 RiverLyricNotes = \relative c'' {
+  R1 * 4
   \RiverVoiceA
-  r1
+  R1
   \RiverVoiceChorus
   \RiverVoiceA
-  r1
+  R1
   \RiverVoiceChorus
   \RiverVoiceSlow
   \RiverVoiceChorus

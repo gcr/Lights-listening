@@ -35,6 +35,7 @@
 
     \key c \major
     \new Voice = "lights"  {
+      \autoBeamOff
       \RiverLyricNotes
     }
     \new Lyrics \lyricsto "lights" {
