@@ -24,8 +24,9 @@
 RiverChorustext = \lyricmode {
   Take me, ri -- ver!
   Car -- ry me far!
-  Lead me, ri -- ver
-  like a mo -- ther % I'm tempted to make a 'your mom' joke, but I hate those.
+  Lead me, ri -- ver,
+  like a mo -- ther. % I'm tempted to make a 'your mom' joke, but I hate those.
+                     % ...Naaah.
   Take me o -- ver
   to some o -- ther un -- known.
   Put me in the un -- der -- tow.
@@ -159,26 +160,29 @@ RiverVoiceSlow = \relative c' {
 %%%%%%%%%%%%%%%%%%%
 \parallelMusic #'(RiverIntroRH RiverIntroLH) {
   % Intro
-  r8\pp g'\( e e'4-> g,8 c4-> ~ |
-  c'2        r2 |
+  r8 g'\pp\( e e'4-> g,8 c4-> ~ |
+  c'1 |
 
   c8 g e c'4-> f,8 g4\) ~ |
   c2.             b8 g |
 
-  r8\mp g\( f g'4-> a,8 f'4-> ~ |
+  r8 g\p\( f g'4-> a,8 f'4-> ~ |
   f2..              e8 |
 
   r8 g, f e'4-> a,8 c4\) |
   <f a>2.        a8 g8 |
 
   % --
-  r8 g\( e e'4 g,8 c4 ~ |
+  r8 g\mp\( e e'4-> g,8 c4 ~ |
   c,4.( ~ <d e g>4. ~ <d e g>4) |
-  % << { c,1 } \\ { r4. <d e g>2 ~ <d e g>8 } >> |
 
-  c8 g e c'4 f,8 g4\) ~ |
+  c8 g e c'4-> f,8 g4\) ~ |
   c4.( <d e g>4.) b8 g |
-  %<< { c2. b8 g } \\ { r4. <d e g>4. } >> |
+
+  r8 g\( f g'4-> a,8 f'4-> ~ |
+  R1 |
+
+  r8 g, f e'4-> a,8 c4\) |
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
