@@ -84,9 +84,26 @@ UpUpText = \lyricmode {
 }
 
 \parallelMusic #'(UpUpIntroRHB UpUpIntroLHB) {
+  % We ran a good course
+  r8 f c' bes4 ees,8 bes' aes |
+  f2 ees |
+
+  r8 c, ees aes g ees c r8 |
+  aes,2.. aes8 |
+
+  r8 f c' bes4 ees,8 bes' aes |
+  f'2 ees |
+
+  r8 c, ees aes8 ~ aes2 |
+  aes,1 |
+}
+
+\parallelMusic #'(UpUpIntroRHC UpUpIntroLHC) {
+  % Another voice that has more depth than the first.. To be used after the
+  % chorus.
   r4 <aes c>8  <g bes>4.  <g bes>8 <ees aes>8 ~ |
   << {s1}\\{ <f, f'>2 <ees ees'> } \\ { s8 c'4. s8 bes4. } >> |
-     % this blank voice here is to reverse the direction of the stems
+     % ^ this blank voice here is to reverse the direction of the stems
 
   r8 c ees aes4. g4 |
   <aes ees'>1 |
