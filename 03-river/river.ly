@@ -173,7 +173,7 @@ RiverVoiceSlow = \relative c' {
 
   % --
   r8 g\( e e'4 g,8 c4 ~ |
-  c,4.( ~ <d e g>2 ~ <d e g>8) |
+  c,4.( ~ <d e g>4. ~ <d e g>4) |
   % << { c,1 } \\ { r4. <d e g>2 ~ <d e g>8 } >> |
 
   c8 g e c'4 f,8 g4\) ~ |
