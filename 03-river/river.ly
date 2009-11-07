@@ -212,6 +212,19 @@ RiverVoiceSlow = \relative c' {
   % faces becoming tired.
   g8( c g b4-> e,8 g4) |
   c4.( <d e g>4.) e8 c |
+
+  % I could discover
+  f8( g f f'4 a,8 c4) |
+  f,4.( <f' g c>4.) e4 |
+
+  % that doesn't expire
+  s1 |
+  c8 d c <f a c>4 g8 <e g> d |
+
+  % stumble me!
+  s1 |
+  g,4.
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
