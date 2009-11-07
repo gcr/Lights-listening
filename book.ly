@@ -41,6 +41,7 @@
         \time 4/4
         \key c \major
         \new Voice = "RiverLights"  {
+          \autoBeamOff
           \RiverLyricNotes
         }
         \new Lyrics \lyricsto "RiverLights" {

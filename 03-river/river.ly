@@ -164,7 +164,7 @@ RiverVoiceSlow = \relative c' {
   c'1 |
 
   c8 g e c'4-> f,8 g4\) ~ |
-  c2.             b8 g |
+  c2.             b4 |
 
   r8 g\p\( f g'4-> a,8 f'4-> ~ |
   f2..              e8 |
@@ -179,10 +179,39 @@ RiverVoiceSlow = \relative c' {
   c8 g e c'4-> f,8 g4\) ~ |
   c4.( <d e g>4.) b8 g |
 
-  r8 g\( f g'4-> a,8 f'4-> ~ |
-  R1 |
+  r8 g( f g'4-> a,8 f'4-> ~ |
+  f4.( <f' g c>4. ~ <f g c>4) |
 
-  r8 g, f e'4-> a,8 c4\) |
+  r8 g, f a'4-> a,8 d c) |
+  f,4.( <f' a>4) c8 <e g>4 |
+}
+
+\parallelMusic #'(RiverRHA RiverLHA) {
+  % Out across
+  r1 |
+  c4.( <d e g>4. ~ <d e g>4) |
+
+  % I see buildings
+  r1 |
+  c4.( <f g c>4.) b8 g |
+
+  % .. the world
+  r2 r8 c8 d4 |
+  f,4.( <f' a>4. ~ <f a>4) |
+
+  % -tains turn in to tiles
+  a4. g4. d8 c |
+  c4. <f c'>4. <d g>4 |
+
+  % losing their leaves
+  % odd timing here, but I think I like that. I'll probably change it when I get
+  % home though. No piano with me.
+  g'8( c g d'4-> g,8 c4) |
+  c4.( <d e g>4. ~ <d e g>4)|
+
+  % faces becoming tired.
+  g8( c g b4-> e,8 g4) |
+  c4.( <d e g>4.) e8 c |
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -190,22 +219,24 @@ RiverLyricNotes = \relative c'' {
   R1 * 8
   \RiverVoiceA
   R1
-  \RiverVoiceChorus
-  \RiverVoiceA
-  R1
-  \RiverVoiceChorus
-  \RiverVoiceSlow
-  \RiverVoiceChorus
+  % \RiverVoiceChorus
+  % \RiverVoiceA
+  % R1
+  % \RiverVoiceChorus
+  % \RiverVoiceSlow
+  % \RiverVoiceChorus
 }
 
 RiverPianoRH = {
   \relative c' {
     \RiverIntroRH
+    \RiverRHA
   }
 }
 RiverPianoLH = {
   \relative c {
     \RiverIntroLH
+    \RiverLHA
   }
 }
 
