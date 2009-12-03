@@ -17,6 +17,10 @@
                    Composed and arranged by Lights Poxleitner
                   Arranged for vocals and piano just for you!
 
+    Idea for river ending:
+        C               Gm or Ees or Bes?    F
+    Put me in the un -- der --               tow (with a tr. at the end- B C B G
+                                             B C B G\rit B C B G B C B G D)
 %}
 
 % Lyrics graciously provided by
@@ -223,7 +227,17 @@ RiverVoiceSlow = \relative c' {
 
   % stumble me!
   s1 |
-  g,4.
+  g,4. s4. s4|
+
+  s1*2 \break | s1*2 \break |
+  s1*4 \break|
+  s1*4 \break|
+  s1*4 \break|
+  s1*4 \break|
+  s1*4 \break|
+  s1*4 \break|
+  s1*4 \break|
+  s1*4 \break|
 
 }
 
@@ -232,8 +246,8 @@ RiverLyricNotes = \relative c'' {
   R1 * 8
   \RiverVoiceA
   R1
-  % \RiverVoiceChorus
-  % \RiverVoiceA
+  \RiverVoiceChorus
+  \RiverVoiceA
   % R1
   % \RiverVoiceChorus
   % \RiverVoiceSlow

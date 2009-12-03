@@ -24,6 +24,7 @@
     \tocItem \markup "03 - River"
     \header {
       title         = "River"
+      subtitle      = "HELP YOU GUYS THE CHORDS THEY SOUND WRONG im terrible at this"
       composer      = "Composed by Lights"
       arranger      = "Arranged for piano by gcr"
       opus          = \markup { From \italic { The Listening } }
