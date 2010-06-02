@@ -19,5 +19,5 @@ To make all the songs and produce individual .PDF files of them, run @make all-s
 
 Please understand that it's all largely incomplete. Sorry to disappoint with so little; perhaps one day I can make things right?
 
-!http://github.com/hotdog003/Lights-listening/raw/master/readme.jpg(The Listening cover)!
+!http://github.com/gcr/Lights-listening/raw/master/readme.jpg(The Listening cover)!
 _(This cover and all the music here ©2009 Lights Poxleitner. Copied without permission.)_
